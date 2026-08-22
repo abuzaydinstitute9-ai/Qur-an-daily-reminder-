@@ -1,0 +1,141 @@
+/* ============================================================
+   surah-data.js
+   Master list of the 114 surahs used across index.html, quran.html
+   and reader.html.
+
+   `page` is the starting page number in the standard 604-page
+   Madinah Mushaf (King Fahd Complex Uthmani print). This numbering
+   is the one printed in the great majority of Madinah Mushaf
+   copies, but a small number of regional print runs shift a page
+   or two — check a handful of entries against your own physical
+   copy before relying on it for exact verse jumps.
+   ============================================================ */
+
+const surahData = [
+  { id: 1,   name: "Al-Fatihah",      arabic: "الفاتحة",        verses: 7,   page: 1   },
+  { id: 2,   name: "Al-Baqarah",      arabic: "البقرة",         verses: 286, page: 2   },
+  { id: 3,   name: "Aal-Imran",       arabic: "آل عمران",       verses: 200, page: 50  },
+  { id: 4,   name: "An-Nisa",         arabic: "النساء",         verses: 176, page: 77  },
+  { id: 5,   name: "Al-Ma'idah",      arabic: "المائدة",        verses: 120, page: 106 },
+  { id: 6,   name: "Al-An'am",        arabic: "الأنعام",        verses: 165, page: 128 },
+  { id: 7,   name: "Al-A'raf",        arabic: "الأعراف",        verses: 206, page: 151 },
+  { id: 8,   name: "Al-Anfal",        arabic: "الأنفال",        verses: 75,  page: 177 },
+  { id: 9,   name: "At-Tawbah",       arabic: "التوبة",         verses: 129, page: 187 },
+  { id: 10,  name: "Yunus",           arabic: "يونس",           verses: 109, page: 208 },
+  { id: 11,  name: "Hud",             arabic: "هود",            verses: 123, page: 221 },
+  { id: 12,  name: "Yusuf",           arabic: "يوسف",           verses: 111, page: 235 },
+  { id: 13,  name: "Ar-Ra'd",         arabic: "الرعد",          verses: 43,  page: 249 },
+  { id: 14,  name: "Ibrahim",         arabic: "ابراهيم",        verses: 52,  page: 255 },
+  { id: 15,  name: "Al-Hijr",         arabic: "الحجر",          verses: 99,  page: 262 },
+  { id: 16,  name: "An-Nahl",         arabic: "النحل",          verses: 128, page: 267 },
+  { id: 17,  name: "Al-Isra",         arabic: "الإسراء",        verses: 111, page: 282 },
+  { id: 18,  name: "Al-Kahf",         arabic: "الكهف",          verses: 110, page: 293 },
+  { id: 19,  name: "Maryam",          arabic: "مريم",           verses: 98,  page: 305 },
+  { id: 20,  name: "Ta-Ha",           arabic: "طه",             verses: 135, page: 312 },
+  { id: 21,  name: "Al-Anbiya",       arabic: "الأنبياء",       verses: 112, page: 322 },
+  { id: 22,  name: "Al-Hajj",         arabic: "الحج",           verses: 78,  page: 332 },
+  { id: 23,  name: "Al-Mu'minun",     arabic: "المؤمنون",       verses: 118, page: 342 },
+  { id: 24,  name: "An-Nur",          arabic: "النور",          verses: 64,  page: 350 },
+  { id: 25,  name: "Al-Furqan",       arabic: "الفرقان",        verses: 77,  page: 359 },
+  { id: 26,  name: "Ash-Shu'ara",     arabic: "الشعراء",        verses: 227, page: 367 },
+  { id: 27,  name: "An-Naml",         arabic: "النمل",          verses: 93,  page: 377 },
+  { id: 28,  name: "Al-Qasas",        arabic: "القصص",          verses: 88,  page: 385 },
+  { id: 29,  name: "Al-Ankabut",      arabic: "العنكبوت",       verses: 69,  page: 396 },
+  { id: 30,  name: "Ar-Rum",          arabic: "الروم",          verses: 60,  page: 404 },
+  { id: 31,  name: "Luqman",          arabic: "لقمان",          verses: 34,  page: 411 },
+  { id: 32,  name: "As-Sajdah",       arabic: "السجدة",         verses: 30,  page: 415 },
+  { id: 33,  name: "Al-Ahzab",        arabic: "الأحزاب",        verses: 73,  page: 418 },
+  { id: 34,  name: "Saba",            arabic: "سبأ",            verses: 54,  page: 428 },
+  { id: 35,  name: "Fatir",           arabic: "فاطر",           verses: 45,  page: 434 },
+  { id: 36,  name: "Ya-Sin",          arabic: "يس",             verses: 83,  page: 440 },
+  { id: 37,  name: "As-Saffat",       arabic: "الصافات",        verses: 182, page: 446 },
+  { id: 38,  name: "Sad",             arabic: "ص",              verses: 88,  page: 453 },
+  { id: 39,  name: "Az-Zumar",        arabic: "الزمر",          verses: 75,  page: 458 },
+  { id: 40,  name: "Ghafir",          arabic: "غافر",           verses: 85,  page: 467 },
+  { id: 41,  name: "Fussilat",        arabic: "فصلت",           verses: 54,  page: 477 },
+  { id: 42,  name: "Ash-Shura",       arabic: "الشورى",         verses: 53,  page: 483 },
+  { id: 43,  name: "Az-Zukhruf",      arabic: "الزخرف",         verses: 89,  page: 489 },
+  { id: 44,  name: "Ad-Dukhan",       arabic: "الدخان",         verses: 59,  page: 496 },
+  { id: 45,  name: "Al-Jathiyah",     arabic: "الجاثية",        verses: 37,  page: 499 },
+  { id: 46,  name: "Al-Ahqaf",        arabic: "الأحقاف",        verses: 35,  page: 502 },
+  { id: 47,  name: "Muhammad",        arabic: "محمد",           verses: 38,  page: 507 },
+  { id: 48,  name: "Al-Fath",         arabic: "الفتح",          verses: 29,  page: 511 },
+  { id: 49,  name: "Al-Hujurat",      arabic: "الحجرات",        verses: 18,  page: 515 },
+  { id: 50,  name: "Qaf",             arabic: "ق",              verses: 45,  page: 518 },
+  { id: 51,  name: "Adh-Dhariyat",    arabic: "الذاريات",       verses: 60,  page: 520 },
+  { id: 52,  name: "At-Tur",          arabic: "الطور",          verses: 49,  page: 523 },
+  { id: 53,  name: "An-Najm",         arabic: "النجم",          verses: 62,  page: 526 },
+  { id: 54,  name: "Al-Qamar",        arabic: "القمر",          verses: 55,  page: 528 },
+  { id: 55,  name: "Ar-Rahman",       arabic: "الرحمن",         verses: 78,  page: 531 },
+  { id: 56,  name: "Al-Waqi'ah",      arabic: "الواقعة",        verses: 96,  page: 534 },
+  { id: 57,  name: "Al-Hadid",        arabic: "الحديد",         verses: 29,  page: 537 },
+  { id: 58,  name: "Al-Mujadila",     arabic: "المجادلة",       verses: 22,  page: 542 },
+  { id: 59,  name: "Al-Hashr",        arabic: "الحشر",          verses: 24,  page: 545 },
+  { id: 60,  name: "Al-Mumtahanah",   arabic: "الممتحنة",       verses: 13,  page: 549 },
+  { id: 61,  name: "As-Saff",         arabic: "الصف",           verses: 14,  page: 551 },
+  { id: 62,  name: "Al-Jumu'ah",      arabic: "الجمعة",         verses: 11,  page: 553 },
+  { id: 63,  name: "Al-Munafiqun",    arabic: "المنافقون",      verses: 11,  page: 554 },
+  { id: 64,  name: "At-Taghabun",     arabic: "التغابن",        verses: 18,  page: 556 },
+  { id: 65,  name: "At-Talaq",        arabic: "الطلاق",         verses: 12,  page: 558 },
+  { id: 66,  name: "At-Tahrim",       arabic: "التحريم",        verses: 12,  page: 560 },
+  { id: 67,  name: "Al-Mulk",         arabic: "الملك",          verses: 30,  page: 562 },
+  { id: 68,  name: "Al-Qalam",        arabic: "القلم",          verses: 52,  page: 564 },
+  { id: 69,  name: "Al-Haqqah",       arabic: "الحاقة",         verses: 52,  page: 566 },
+  { id: 70,  name: "Al-Ma'arij",      arabic: "المعارج",        verses: 44,  page: 568 },
+  { id: 71,  name: "Nuh",             arabic: "نوح",            verses: 28,  page: 570 },
+  { id: 72,  name: "Al-Jinn",         arabic: "الجن",           verses: 28,  page: 572 },
+  { id: 73,  name: "Al-Muzzammil",    arabic: "المزمل",         verses: 20,  page: 574 },
+  { id: 74,  name: "Al-Muddaththir",  arabic: "المدثر",         verses: 56,  page: 575 },
+  { id: 75,  name: "Al-Qiyamah",      arabic: "القيامة",        verses: 40,  page: 577 },
+  { id: 76,  name: "Al-Insan",        arabic: "الانسان",        verses: 31,  page: 578 },
+  { id: 77,  name: "Al-Mursalat",     arabic: "المرسلات",       verses: 50,  page: 580 },
+  { id: 78,  name: "An-Naba",         arabic: "النبأ",          verses: 40,  page: 582 },
+  { id: 79,  name: "An-Nazi'at",      arabic: "النازعات",       verses: 46,  page: 583 },
+  { id: 80,  name: "Abasa",           arabic: "عبس",            verses: 42,  page: 585 },
+  { id: 81,  name: "At-Takwir",       arabic: "التكوير",        verses: 29,  page: 586 },
+  { id: 82,  name: "Al-Infitar",      arabic: "الإنفطار",       verses: 19,  page: 587 },
+  { id: 83,  name: "Al-Mutaffifin",   arabic: "المطففين",       verses: 36,  page: 587 },
+  { id: 84,  name: "Al-Inshiqaq",     arabic: "الإنشقاق",       verses: 25,  page: 589 },
+  { id: 85,  name: "Al-Buruj",        arabic: "البروج",         verses: 22,  page: 590 },
+  { id: 86,  name: "At-Tariq",        arabic: "الطارق",         verses: 17,  page: 591 },
+  { id: 87,  name: "Al-A'la",         arabic: "الأعلى",         verses: 19,  page: 591 },
+  { id: 88,  name: "Al-Ghashiyah",    arabic: "الغاشية",        verses: 26,  page: 592 },
+  { id: 89,  name: "Al-Fajr",         arabic: "الفجر",          verses: 30,  page: 593 },
+  { id: 90,  name: "Al-Balad",        arabic: "البلد",          verses: 20,  page: 594 },
+  { id: 91,  name: "Ash-Shams",       arabic: "الشمس",          verses: 15,  page: 595 },
+  { id: 92,  name: "Al-Layl",         arabic: "الليل",          verses: 21,  page: 595 },
+  { id: 93,  name: "Ad-Duha",         arabic: "الضحى",          verses: 11,  page: 596 },
+  { id: 94,  name: "Ash-Sharh",       arabic: "الشرح",          verses: 8,   page: 596 },
+  { id: 95,  name: "At-Tin",          arabic: "التين",          verses: 8,   page: 597 },
+  { id: 96,  name: "Al-Alaq",         arabic: "العلق",          verses: 19,  page: 597 },
+  { id: 97,  name: "Al-Qadr",         arabic: "القدر",          verses: 5,   page: 598 },
+  { id: 98,  name: "Al-Bayyinah",     arabic: "البينة",         verses: 8,   page: 598 },
+  { id: 99,  name: "Az-Zalzalah",     arabic: "الزلزلة",        verses: 8,   page: 599 },
+  { id: 100, name: "Al-Adiyat",       arabic: "العاديات",       verses: 11,  page: 599 },
+  { id: 101, name: "Al-Qari'ah",      arabic: "القارعة",        verses: 11,  page: 600 },
+  { id: 102, name: "At-Takathur",     arabic: "التكاثر",        verses: 8,   page: 600 },
+  { id: 103, name: "Al-Asr",          arabic: "العصر",          verses: 3,   page: 601 },
+  { id: 104, name: "Al-Humazah",      arabic: "الهمزة",         verses: 9,   page: 601 },
+  { id: 105, name: "Al-Fil",          arabic: "الفيل",          verses: 5,   page: 601 },
+  { id: 106, name: "Quraysh",         arabic: "قريش",           verses: 4,   page: 602 },
+  { id: 107, name: "Al-Ma'un",        arabic: "الماعون",        verses: 7,   page: 602 },
+  { id: 108, name: "Al-Kawthar",      arabic: "الكوثر",         verses: 3,   page: 602 },
+  { id: 109, name: "Al-Kafirun",      arabic: "الكافرون",       verses: 6,   page: 603 },
+  { id: 110, name: "An-Nasr",         arabic: "النصر",          verses: 3,   page: 603 },
+  { id: 111, name: "Al-Masad",        arabic: "المسد",          verses: 5,   page: 603 },
+  { id: 112, name: "Al-Ikhlas",       arabic: "الإخلاص",        verses: 4,   page: 604 },
+  { id: 113, name: "Al-Falaq",        arabic: "الفلق",          verses: 5,   page: 604 },
+  { id: 114, name: "An-Nas",          arabic: "الناس",          verses: 6,   page: 604 },
+];
+
+const TOTAL_PAGES = 604;
+
+function surahForPage(pageNum) {
+  let match = surahData[0];
+  for (const s of surahData) {
+    if (s.page <= pageNum) match = s; else break;
+  }
+  return match;
+}
+
+if (typeof module !== "undefined") module.exports = { surahData, TOTAL_PAGES, surahForPage };

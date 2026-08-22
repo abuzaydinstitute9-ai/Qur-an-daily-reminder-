@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qur'an — Abu Zayd Qur'an</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">اق</span>
+      <span class="brand-text">
+        <strong>Abu Zayd Qur'an</strong>
+        <span>Recitation &amp; Da'wah Tools</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="reader.html">Reader</a>
+      <a href="quran.html" class="active">Qur'an</a>
+      <a href="daily.html">Daily Cards</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="shell" style="padding-top:32px;">
+    <div class="section-head">
+      <h2>Full Qur'an navigation</h2>
+      <p>114 surahs &middot; 604 pages &middot; tap any surah to open it in the reader</p>
+    </div>
+
+    <div class="nav-toolbar">
+      <input id="surahSearch" class="search-input" type="text" placeholder="Search by surah name (English or Arabic)&hellip;">
+    </div>
+
+    <ul id="surahList" class="surah-list"></ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    Qur'an text should be verified against a certified Mushaf source before publishing.
+    Translations and hadith should be checked against verified collections
+    (Sahih al-Bukhari, Sahih Muslim) before use.
+    <br>
+    <strong>Powered by Abu Zayd Solutions</strong> &middot; 2026
+  </div>
+</footer>
+
+<script src="js/surah-data.js"></script>
+<script>
+  const listEl = document.getElementById("surahList");
+  const searchEl = document.getElementById("surahSearch");
+
+  function renderList(items) {
+    listEl.innerHTML = items.map((s) => `
+      <li class="surah-row">
+        <span class="surah-index">${s.id}</span>
+        <span class="surah-names">
+          <span class="en">${s.name}</span>
+          <span class="ar">${s.arabic}</span>
+        </span>
+        <span class="surah-meta">${s.verses} verses</span>
+        <a class="surah-page-btn" href="reader.html?page=${s.page}">Page ${s.page}</a>
+      </li>
+    `).join("");
+  }
+
+  searchEl.addEventListener("input", () => {
+    const q = searchEl.value.trim().toLowerCase();
+    const filtered = surahData.filter(
+      (s) => s.name.toLowerCase().includes(q) || s.arabic.includes(q)
+    );
+    renderList(filtered);
+  });
+
+  renderList(surahData);
+</script>
+</body>
+</html>

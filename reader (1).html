@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reader — Abu Zayd Qur'an</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">اق</span>
+      <span class="brand-text">
+        <strong>Abu Zayd Qur'an</strong>
+        <span>Recitation &amp; Da'wah Tools</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="reader.html" class="active">Reader</a>
+      <a href="quran.html">Qur'an</a>
+      <a href="daily.html">Daily Cards</a>
+    </nav>
+  </div>
+</header>
+
+<main class="reader-shell">
+  <div class="shell">
+
+    <div class="reader-toolbar">
+      <div class="group">
+        <button id="prevPageBtn" class="icon-btn" title="Previous page" aria-label="Previous page">&#8592;</button>
+        <span id="pageIndicator" class="page-indicator">Page 1 / 604</span>
+        <button id="nextPageBtn" class="icon-btn" title="Next page" aria-label="Next page">&#8594;</button>
+      </div>
+      <div class="group" style="font-size:13px;color:var(--ink-soft);">
+        <span id="currentSurahLabel"></span>
+      </div>
+      <div class="group">
+        <input id="jumpPageInput" type="number" min="1" max="604" placeholder="Go to page"
+               style="width:110px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;">
+        <button id="jumpPageBtn" class="btn btn-outline btn-sm">Go</button>
+      </div>
+    </div>
+
+    <div id="mushafFrame" class="mushaf-frame">
+      <img id="pageImg" class="page-img" alt="Mushaf page">
+      <div id="pageFallback" class="page-fallback" style="display:none;">
+        <strong>Page image not found</strong>
+        <span>Add <code>images/pages/pageNNN.jpg</code> for this page number — see the README in the project folder.</span>
+      </div>
+      <div id="pointerOverlay">
+        <div id="pointerMarker" class="pointer-marker"></div>
+      </div>
+    </div>
+
+    <div class="reader-controls">
+      <div class="pointer-controls">
+        <span>Pointer</span>
+        <button id="wordRightBtn" class="icon-btn" title="Next word" aria-label="Next word">&#8592;</button>
+        <button id="wordLeftBtn" class="icon-btn" title="Previous word" aria-label="Previous word">&#8594;</button>
+        <span class="divider"></span>
+        <button id="lineUpBtn" class="icon-btn" title="Previous line" aria-label="Previous line">&#8593;</button>
+        <button id="lineDownBtn" class="icon-btn" title="Next line" aria-label="Next line">&#8595;</button>
+        <span class="divider"></span>
+        <button id="resetPointerBtn" class="btn btn-ghost btn-sm">Reset</button>
+        <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);margin-left:4px;">
+          <input type="checkbox" id="hidePointerToggle"> Hide
+        </label>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:8px;">
+      Point at any word by dragging the marker or tapping the page directly — the ← → buttons and arrow keys
+      nudge it word by word (right&#8209;to&#8209;left), the ↑ ↓ buttons move it line by line. It only ever
+      moves when you move it, so it stays under your control while you recite and record.
+    </p>
+
+    <div class="audio-panel">
+      <span id="recordDot" class="record-dot"></span>
+      <audio id="audioPlayer" controls></audio>
+      <button id="recordBtn" class="btn btn-outline btn-sm">Record recitation</button>
+      <a id="downloadRecordingLink" class="btn btn-primary btn-sm" style="display:none;" download>Download recording</a>
+    </div>
+    <p id="audioStatus" style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:8px;"></p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    Qur'an text should be verified against a certified Mushaf source before publishing.
+    Translations and hadith should be checked against verified collections
+    (Sahih al-Bukhari, Sahih Muslim) before use.
+    <br>
+    <strong>Powered by Abu Zayd Solutions</strong> &middot; 2026
+  </div>
+</footer>
+
+<script src="js/surah-data.js"></script>
+<script src="js/reader.js"></script>
+</body>
+</html>

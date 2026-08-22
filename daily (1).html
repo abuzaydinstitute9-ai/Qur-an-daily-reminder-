@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Cards — Abu Zayd Qur'an</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">اق</span>
+      <span class="brand-text">
+        <strong>Abu Zayd Qur'an</strong>
+        <span>Recitation &amp; Da'wah Tools</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="reader.html">Reader</a>
+      <a href="quran.html">Qur'an</a>
+      <a href="daily.html" class="active">Daily Cards</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="shell" style="padding-top:32px;padding-bottom:60px;">
+    <div class="section-head">
+      <h2>Daily verse &amp; hadith card</h2>
+      <p>Paste the full verse or hadith — the card grows to fit it, nothing is ever shortened</p>
+    </div>
+
+    <div class="daily-layout">
+      <div class="daily-form card">
+        <label>Content type</label>
+        <div class="radio-row">
+          <label><input type="radio" name="contentType" value="verse" checked><span>Qur'an verse</span></label>
+          <label><input type="radio" name="contentType" value="hadith"><span>Hadith</span></label>
+        </div>
+
+        <label for="arabicText">Arabic text — quote the full ayah or hadith, no ellipses</label>
+        <textarea id="arabicText" class="arabic-field" rows="3">وَقُرْآنًا فَرَقْنَاهُ لِتَقْرَأَهُ عَلَى النَّاسِ عَلَىٰ مُكْثٍ</textarea>
+
+        <label for="translationText">English translation — also in full</label>
+        <textarea id="translationText" rows="4">And [it is] a Qur'an which We have separated [by intervals] that you might recite it to the people over a prolonged period.</textarea>
+
+        <label for="refText">Reference (surah &amp; verse, or hadith collection)</label>
+        <input id="refText" type="text" value="Surah Al-Isra, 17:106">
+
+        <label for="phoneText">Contact line shown on the card</label>
+        <input id="phoneText" type="text" placeholder="e.g. WhatsApp +234 ...">
+
+        <label for="themeSelect">Card theme</label>
+        <select id="themeSelect">
+          <option value="green">Green background, white text</option>
+          <option value="white">White background, green text</option>
+        </select>
+      </div>
+
+      <div class="card-preview-wrap">
+        <canvas id="dailyCanvas"></canvas>
+        <div class="preview-actions">
+          <button id="copyBtn" class="btn btn-outline btn-sm">Copy text</button>
+          <button id="downloadBtn" class="btn btn-primary btn-sm">Download image</button>
+        </div>
+        <div id="copyFeedback" class="copy-feedback"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    Qur'an text should be verified against a certified Mushaf source before publishing.
+    Translations and hadith should be checked against verified collections
+    (Sahih al-Bukhari, Sahih Muslim) before use.
+    <br>
+    <strong>Powered by Abu Zayd Solutions</strong> &middot; 2026
+  </div>
+</footer>
+
+<script src="js/surah-data.js"></script>
+<script src="js/daily.js"></script>
+</body>
+</html>
